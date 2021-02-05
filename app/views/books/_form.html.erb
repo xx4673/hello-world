@@ -8,6 +8,17 @@
       </ul>
     </div>
   <% end %>
+    <p>
+    <label>我的頭像</label>
+    <%= image_tag book.avatar.small_thumb.url if book.avatar? %>
+    <%= form.file_field :avatar %>
+  </p>
+    <p>
+    <label>
+      <%= form.check_box :remove_avatar %>
+      刪除頭像
+    </label>
+  </p>
 
   <div class="field">
     <%= form.label :title %>
